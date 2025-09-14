@@ -1,9 +1,16 @@
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f9f9f9;
-  color: #222;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #f9fafc 0%, #f7f7f7 100%);
+  color: #1a1a1a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -23,86 +30,119 @@ body {
   color: #222;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+    background: #f6f6f6;
 }
 
+
 header {
-  background: linear-gradient(90deg, #fbb034 0%, #ffdd00 100%);
+  background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%);
   color: #222;
-  padding: 1.5rem 1rem 1rem 1rem;
+  padding: 2.2rem 1rem 1.2rem 1rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 16px rgba(255, 174, 0, 0.07);
+  border-bottom-left-radius: 2.5rem;
+    background: #fff;
+  position: relative;
+  z-index: 2;
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 0.03em;
 }
 
 .logo-icon {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 2px #fff6);
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin: 0;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
 }
 
 .subtitle {
-  font-size: 1.1rem;
-  margin-top: 0.3rem;
-  color: #444;
+  font-size: 1.15rem;
+  margin-top: 0.5rem;
+  color: #6d4e00;
+  font-weight: 500;
+  opacity: 0.85;
 }
 
 main {
   flex: 1;
-  padding: 1.2rem 0.5rem 2rem 0.5rem;
-  max-width: 500px;
+  padding: 2.2rem 0.5rem 2.5rem 0.5rem;
+  max-width: 600px;
   margin: 0 auto;
+    color: #1a1a1a;
+  flex-direction: column;
+  gap: 2.2rem;
 }
 
+.leaders {
+  display: flex;
+    background: #f8f8f8;
+  gap: 1.5rem;
+}
 .leader {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   background: #fffbe6;
-  border-radius: 1rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  padding: 1rem;
-  margin-bottom: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(255, 174, 0, 0.08);
+  padding: 1.1rem 1.2rem;
+  transition: transform 0.18s cubic-bezier(.4,1.4,.6,1), box-shadow 0.18s;
+  will-change: transform;
+}
+.leader:hover {
+  transform: translateY(-2px) scale(1.025);
+  box-shadow: 0 6px 24px rgba(255, 174, 0, 0.13);
 }
 
 .leader-img img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 2px solid #fbb034;
+  width: 72px;
+  height: 72px;
+    color: #333;
+  border: 2.5px solid #ffa751;
   background: #fff;
+  object-fit: cover;
+  box-shadow: 0 2px 8px #ffd58044;
 }
 
 .leader-info h2 {
-  margin: 0 0 0.2rem 0;
-  font-size: 1.2rem;
+    color: #1a1a1a;
+  font-size: 1.18rem;
+  font-weight: 700;
 }
 .leader-info p {
   margin: 0;
-  color: #888;
-  font-size: 0.95rem;
+  color: #b88a00;
+    color: #333;
+  font-weight: 500;
 }
 
 .speerpunten {
   background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  padding: 1.2rem 1rem 1rem 1rem;
+  border-radius: 1.2rem;
+    color: #1a1a1a;
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  margin-bottom: 0.5rem;
+  animation: fadein 0.7s cubic-bezier(.4,1.4,.6,1);
 }
 .speerpunten h2 {
-  margin-top: 0;
-  font-size: 1.3rem;
-  color: #fbb034;
+    color: #888;
+  font-size: 1.35rem;
+  color: #ffa751;
+  font-weight: 800;
+  letter-spacing: 0.03em;
 }
 .speerpunten ul {
   list-style: none;
@@ -110,41 +150,96 @@ main {
   margin: 0;
 }
 .speerpunten li {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.3rem;
+  background: #fff9e6;
+  border-radius: 0.8rem;
+  padding: 0.8rem 0.9rem;
+  box-shadow: 0 1px 4px #ffd58022;
+  transition: box-shadow 0.18s;
+}
+.speerpunten li:hover {
+  box-shadow: 0 4px 16px #ffd58044;
 }
 .speerpunten h3 {
-  margin: 0 0 0.2rem 0;
-  font-size: 1.1rem;
+  margin: 0 0 0.18rem 0;
+  font-size: 1.13rem;
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  font-weight: 700;
 }
 .speerpunten p {
   margin: 0 0 0.2rem 0.2rem;
-  color: #444;
-  font-size: 1rem;
+  color: #6d4e00;
+  font-size: 1.01rem;
+  font-weight: 500;
 }
 
 footer {
   text-align: center;
-  font-size: 0.95rem;
-  color: #888;
-  padding: 1.2rem 0 0.7rem 0;
+  font-size: 1.01rem;
+  color: #b88a00;
+  padding: 1.5rem 0 1.1rem 0;
+  opacity: 0.8;
 }
+
 
 @media (max-width: 600px) {
   main {
-    padding: 1rem 0.2rem 2rem 0.2rem;
+    padding: 1.1rem 0.1rem 1.5rem 0.1rem;
+    gap: 1.2rem;
+  }
+  .leaders {
+    gap: 1rem;
   }
   .leader {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+    padding: 0.8rem 0.7rem;
   }
   .leader-img img {
     width: 56px;
     height: 56px;
   }
+  .speerpunten {
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+  }
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+.partijprogramma {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(255, 174, 0, 0.08);
+  padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+  margin-bottom: 0.5rem;
+  animation: fadein 0.9s cubic-bezier(.4,1.4,.6,1);
+}
+.partijprogramma h2 {
+  margin-top: 0;
+  font-size: 1.28rem;
+  color: #ffa751;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+.partijprogramma ol {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+.partijprogramma li {
+  margin-bottom: 1.1rem;
+  color: #6d4e00;
+  font-size: 1.01rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.partijprogramma strong {
+  color: #b88a00;
 }
 
 .container {
