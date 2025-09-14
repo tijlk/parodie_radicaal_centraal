@@ -6,6 +6,147 @@ body {
   color: #222;
 }
 
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(90deg, #fbb034 0%, #ffdd00 100%);
+  color: #222;
+  padding: 1.5rem 1rem 1rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 2.2rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  color: #444;
+}
+
+main {
+  flex: 1;
+  padding: 1.2rem 0.5rem 2rem 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.leader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fffbe6;
+  border-radius: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.leader-img img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #fbb034;
+  background: #fff;
+}
+
+.leader-info h2 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.2rem;
+}
+.leader-info p {
+  margin: 0;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.speerpunten {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 1.2rem 1rem 1rem 1rem;
+}
+.speerpunten h2 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  color: #fbb034;
+}
+.speerpunten ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.speerpunten li {
+  margin-bottom: 1.2rem;
+}
+.speerpunten h3 {
+  margin: 0 0 0.2rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.speerpunten p {
+  margin: 0 0 0.2rem 0.2rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #888;
+  padding: 1.2rem 0 0.7rem 0;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem 0.2rem 2rem 0.2rem;
+  }
+  .leader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .leader-img img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
 .container {
   max-width: 480px;
   margin: 10vh auto;
