@@ -1,3 +1,4 @@
+  <!-- cta verplaatst naar onderaan -->
 <!DOCTYPE html>
 <html lang="en">
 <!DOCTYPE html>
@@ -19,6 +20,21 @@
     <img src="./hero.jpeg" alt="Hero-afbeelding Radicaal Centraal" />
   </div>
   <main>
+    <section class="nieuws">
+      <h2>Laatste Nieuws</h2>
+      <article>
+        <h3>Radicaal Centraal lanceert BurgerApp</h3>
+        <p><small>14 september 2025</small> – Met de nieuwe BurgerApp kun je stemmen, vlees bestellen én een huis aanvragen. Alles in één klik, behalve als de server plat ligt.</p>
+      </article>
+      <article>
+        <h3>Veestapel gehalveerd, barbecue verkocht uit</h3>
+        <p><small>13 september 2025</small> – Door het halveren van de veestapel is er zoveel vlees dat de nationale barbecue-industrie overuren draait. Vegetariërs eisen nu gratis tofu.</p>
+      </article>
+      <article>
+        <h3>Bas van Bouwen bouwt huis op rotonde</h3>
+        <p><small>12 september 2025</small> – Dankzij het nieuwe stikstofbeleid bouwde Bas van Bouwen een huis op elke rotonde. “Iedereen een eigen rotondewoning!” aldus Bas.</p>
+      </article>
+    </section>
     <section class="speerpunten">
       <h2>Speerpunten</h2>
       <ul>
@@ -39,6 +55,15 @@
           <p>We vereenvoudigen het belastingsstelsel. Geen gedoe, elke euro blijft van jou (behalve de belasting dan).</p>
         </li>
       </ul>
+    </section>
+    <section class="testimonials">
+      <h2>Wat zeggen onze burgers?</h2>
+      <div class="testimonial-list">
+        <blockquote>“Sinds ik gratis vlees krijg, eet ik eindelijk elke dag burger!”<br><span>– Henk uit Haps</span></blockquote>
+        <blockquote>“Dankzij Bas van Bouwen woon ik nu op een rotonde. Altijd uitzicht!”<br><span>– Fatima uit Franeker</span></blockquote>
+        <blockquote>“De BurgerApp werkt bijna altijd. Soms.”<br><span>– Anoniem</span></blockquote>
+        <blockquote>“Ik snap eindelijk mijn belastingaangifte. Denk ik.”<br><span>– Sjoerd uit Sneek</span></blockquote>
+      </div>
     </section>
     <section class="leaders">
       <div class="leader">
@@ -86,8 +111,32 @@
         </li>
       </ol>
     </section>
+    <div class="cta">
+      <a href="#" class="cta-btn cta-lid">Word lid</a>
+      <a href="#" class="cta-btn cta-doemee">Doe mee</a>
+      <a href="#contact" class="cta-btn cta-contact">Contact</a>
+    </div>
   </main>
+  <section class="contact" id="contact">
+    <h2>Contact</h2>
+    <form class="contact-form" autocomplete="off" onsubmit="alert('Bedankt voor je bericht! (Dit formulier werkt niet echt)'); return false;">
+      <label for="naam">Naam</label>
+      <input type="text" id="naam" name="naam" placeholder="Jouw naam" required>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="jij@email.nl" required>
+      <label for="bericht">Bericht</label>
+      <textarea id="bericht" name="bericht" rows="3" placeholder="Typ hier je bericht..." required></textarea>
+      <button type="submit">Verstuur</button>
+    </form>
+    <p class="contact-mail">Of mail naar <a href="mailto:info@radicaalcentraal.nl">info@radicaalcentraal.nl</a></p>
+  </section>
   <footer>
+    <div class="socials">
+      <a href="#" title="Twitter" class="social-icon">🐦</a>
+      <a href="#" title="Facebook" class="social-icon">📘</a>
+      <a href="#" title="Instagram" class="social-icon">📸</a>
+      <a href="#" title="TikTok" class="social-icon">🎵</a>
+    </div>
     <p>&copy; 2025 Radicaal Centraal - Parodiepartij. Gemaakt met een knipoog.</p>
   </footer>
 </body>
